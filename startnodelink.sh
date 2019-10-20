@@ -10,7 +10,7 @@ wget -O /NodeLink/NodeLink.runtimeconfig.json http://automationshack.com/Files/N
 fi
 
 if [ ! -e "/NodeLink/NodeLink.exe" ]; then
-cp /NodeLink/NodeLink.exe /NodeLink/NodeLink.exe.migrated
+mv /NodeLink/NodeLink.exe /NodeLink/NodeLink.exe.migrated
 fi
 
 echo starting NodeLink
