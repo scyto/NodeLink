@@ -12,9 +12,10 @@ fi
 
 echo starting NodeLink
 dotnet /NodeLink/NodeLink.dll &
-hostip=$(hostname -I | awk '{print $1}')
-hostport="8090"
-echo
-echo "### Install complete. Login to NodeLink at http://$hostip:$hostport if you used docker bridge networking or http://dockerhostip:mappedport "
-echo &
 /bin/bash
+
+#hostip=$(hostname -I | awk '{print $1}')
+#hostport="8090"
+#echo
+#echo "### Install complete. Login to NodeLink at http://$hostip:$hostport if you used docker bridge networking or http://dockerhostip:mappedport "
+#echo
