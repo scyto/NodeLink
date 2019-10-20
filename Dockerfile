@@ -16,4 +16,5 @@ ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ENV LANG C.UTF-8
 
 # Run  when the container launches 
-ENTRYPOINT ["./startnodelink.sh"]
+# ENTRYPOINT ["./startnodelink.sh"]
+CMD ["/bin/bash", "/usr/local/myscripts/mystart.sh"]
