@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     libmono-System.Net.Http \
     libmono-Microsoft.VisualBasic \
     && apt-get clean \
-    && chmod +x mystart.sh 
+    && chmod +x startnodelink.sh 
 
 # Define environment variable
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
