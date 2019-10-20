@@ -1,13 +1,11 @@
-FROM mono:slim
+FROM mcr.microsoft.com/dotnet/core/runtime
 
 EXPOSE 8090
 VOLUME NodeLink
 COPY startnodelink.sh /startnodelink.sh
 
 RUN apt-get update && apt-get install -y \
-	wget \
-    libmono-System.Net.Http \
-    libmono-Microsoft.VisualBasic \
+    wget \
     && apt-get clean \
     && chmod +x startnodelink.sh 
 
