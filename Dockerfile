@@ -17,4 +17,4 @@ ENV LANG C.UTF-8
 
 # Run  when the container launches 
 # ENTRYPOINT ["./startnodelink.sh"]
-CMD ["/bin/bash", "/usr/local/myscripts/mystart.sh"]
+CMD ["/bin/bash", "/startnodelink.sh"]
