@@ -4,11 +4,10 @@ EXPOSE 8090
 VOLUME NodeLink
 COPY startnodelink.sh /startnodelink.sh
 
-RUN apt-get update  && apt-get install -y \
+RUN apt-get update && apt-get install -y \
 	wget \
     libmono-System.Net.Http \
     libmono-Microsoft.VisualBasic \
-    && mkdir /NodeLink \
     && apt-get clean \
     && chmod +x mystart.sh 
 
