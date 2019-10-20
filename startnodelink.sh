@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ECHO checking if NodeLink exists
+echo checking if NodeLink exists
 if [ ! -e "/NodeLink/NodeLink.dll" ]; then
 wget -O /NodeLink/NodeLink.dll http://automationshack.com/Files/NodeLink.dll 
 fi
@@ -10,7 +10,7 @@ wget -O /NodeLink/NodeLink.runtimeconfig.json http://automationshack.com/Files/N
 fi
 
 
-ECHO starting NodeLink
+echo starting NodeLink
 dotnet /NodeLink/NodeLink.dll &
 hostip=$(hostname -I | awk '{print $1}')
 hostport="8090"
