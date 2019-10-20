@@ -5,10 +5,13 @@ if [ ! -e "/NodeLink/NodeLink.dll" ]; then
 wget -O /NodeLink/NodeLink.dll http://automationshack.com/Files/NodeLink.dll 
 fi
 
-if [ ! -e "NodeLink.runtimeconfig.json" ]; then
+if [ ! -e "/NodeLink/NodeLink.runtimeconfig.json" ]; then
 wget -O /NodeLink/NodeLink.runtimeconfig.json http://automationshack.com/Files/NodeLink.runtimeconfig.json
 fi
 
+if [ ! -e "/NodeLink/NodeLink.exe" ]; then
+cp /NodeLink/NodeLink.exe /NodeLink/NodeLink.exe.migrated
+fi
 
 echo starting NodeLink
 dotnet /NodeLink/NodeLink.dll &
