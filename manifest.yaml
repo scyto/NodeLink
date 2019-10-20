@@ -1,0 +1,12 @@
+image:scyto/nodelink:dev
+manifests:
+  -
+    image:scyto/nodelink:amd64-latest
+    platform:
+      architecture: amd64
+      os: linux
+  -
+    image:scyto/nodelink:arm32v7-latest
+    platform:
+      architecture: arm
+      os: linux
