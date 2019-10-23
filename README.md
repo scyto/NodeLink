@@ -15,9 +15,31 @@ https://forum.universal-devices.com/topic/19214-nodelink-docker/
 https://forum.universal-devices.com/topic/27593-nodelink-moved-to-net-core-3/?do=findComment&comment=271922
 
 ## Getting Started
-To install this container on the default bridge use the following docker run
 
-    docker run --name=NodeLink -v $PWD$:/NodeLink -v /etc/localtime:/etc/localtime:rw -p 8090:8090 scyto/NodeLink
+### My full set of tags is as follows:
+```
+scyto/nodelink:latest			    - mono and nodelink v9.x (linux amd64 only)
+sycto/nodelink:dev-latest		    - dotNet 3.0.0 Core and nodelinkv10.x (linux amd64 & arm32v7 & arm64)
+scyot/nodelink:dev-latest.windows	- dotNet 3.0.0 Core and nodelinkv10.x (windows amd64)
+``` 
+
+### Linux Version 
+
+For linux  use the following command to run the container - replace $pwd% with path to your host mapped files as required (where nodelink will store its config)..
+
+`docker run --name=NodeLink -v $PWD$:/NodeLink -v /etc/localtime:/etc/localtime:rw -p 8090:8090 scyto/NodeLink:dev-latest`
+ 
+
+### Windows Version
+
+For windows use the following command to run the container -replace $pwd% with path to your host mapped files as required
+
+`docker run --name=NodeLink --user "NT AUTHORITY\SYSTEM" -v $PWD$:C:\NodeLink -p 8090:8090 scyto/NodeLink:dev-latest.windows`
+ 
+## Feedback
+Let me know if you find issues. You can bug them on the dev github branch. Dockerhub page here https://hub.docker.com/r/scyto/nodelink
+
+
 
 
 
