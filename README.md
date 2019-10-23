@@ -18,9 +18,9 @@ https://forum.universal-devices.com/topic/27593-nodelink-moved-to-net-core-3/?do
 
 ### My full set of tags is as follows:
 ```
-scyto/nodelink:latest             - mono                         , nodelink v9.x (linux amd64 only)
-sycto/nodelink:dev-latest         - dotNet 3.1.0-preview1.19506.1, nodelinkv10.x (linux amd64 & arm32v7 & arm64)
-scyot/nodelink:dev-latest.windows - dotNet 3.1.0-preview1.19506.1, nodelinkv10.x (windows amd64)
+scyto/nodelink:latest             - mono                          - nodelink  9.x - linux/amd64
+sycto/nodelink:dev-latest         - dotNet 3.1.0-preview1.19506.1 - nodelink 10.x - linux/amd64,arm,arm64
+scyto/nodelink:dev-latest.windows - dotNet 3.1.0-preview1.19506.1 - nodelink 10.x - windows/amd64
 ``` 
 
 ### Linux Version 
