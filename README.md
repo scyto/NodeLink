@@ -16,30 +16,25 @@ https://forum.universal-devices.com/topic/27593-nodelink-moved-to-net-core-3/?do
 
 ## Getting Started
 
-### My full set of tags is as follows:
+### My full set of tags is as follows
+
 ```
 scyto/nodelink:latest             - mono                          - nodelink  9.x - linux/amd64
 sycto/nodelink:dev-latest         - dotNet 3.1.0-preview1.19506.1 - nodelink 10.x - linux/amd64,arm,arm64
 scyto/nodelink:dev-latest.windows - dotNet 3.1.0-preview1.19506.1 - nodelink 10.x - windows/amd64
-``` 
+```
 
-### Linux Version 
+### Linux Version
 
 For linux  use the following command to run the container - replace $pwd$ with path to your host mapped files as required (where nodelink will store its config)..
 
 `docker run --name=NodeLink -v $PWD$:/NodeLink -v /etc/localtime:/etc/localtime:rw -p 8090:8090 scyto/NodeLink:dev-latest`
  
-
 ### Windows Version
 
 For windows use the following command to run the container -replace $pwd$ with path to your host mapped files as required (where nodelink will store its config)..
 
 `docker run --name=NodeLink -v $PWD$:C:\NodeLink -p 8090:8090 scyto/NodeLink:dev-latest.windows`
- 
+
 ## Feedback
 Let me know if you find issues. You can bug them on the dev github branch. Dockerhub page here https://hub.docker.com/r/scyto/nodelink
-
-
-
-
-
