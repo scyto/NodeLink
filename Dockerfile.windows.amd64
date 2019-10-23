@@ -11,7 +11,7 @@ RUN mkdir "c:\Program Files\PowerShell" \
     && tar -xf PowerShell-6.2.3-win-x64.zip -C "c:\Program Files\PowerShell" \
     && del PowerShell-6.2.3-win-x64.zip
 
-# Define environment variable & install powershell
+# Define environment variable globally (required as we have to start container with --user "NT AUTHORITY\SYSTEM" to allow port binding )
 USER ContainerAdministrator
 RUN setx /M PATH "%PATH%;C:\Program Files\PowerShell"
 USER ContainerUser
