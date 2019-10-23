@@ -1,0 +1,19 @@
+FROM mcr.microsoft.com/dotnet/core/runtime:3.1
+
+# raise and set privilege - no secuity issue as container would need to be started as --user "NT AUTHORITY\SYSTEM" to allow port binding anyway.
+USER ContainerAdministrator
+
+EXPOSE 8090
+VOLUME c:/NodeLink
+
+#copy in runtime scripts, powershell and set env
+# COPY ["PowerShell-6.2.3-win-x64", "C:/Program Files/PowerShell/"]
+COPY startnodelink.ps1 c:/startnodelink.ps1
+RUN mkdir "c:\Program Files\PowerShell" \
+    && curl -LO https://github.com/PowerShell/PowerShell/releases/download/v6.2.3/PowerShell-6.2.3-win-x64.zip \
+    && tar -xf PowerShell-6.2.3-win-x64.zip -C "c:\Program Files\PowerShell" \
+    && del PowerShell-6.2.3-win-x64.zip \
+    && setx /M PATH "%PATH%;C:\Program Files\PowerShell"
+
+# Run  when the container launches 
+CMD ["pwsh", "./startnodelink.ps1"]
