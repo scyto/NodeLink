@@ -9,7 +9,7 @@ if [ ! -e "/NodeLink/NodeLink.runtimeconfig.json" ]; then
 wget -O /NodeLink/NodeLink.runtimeconfig.json http://automationshack.com/Files/NodeLink.runtimeconfig.json
 fi
 
-if [ ! -e "/NodeLink/NodeLink.exe" ]; then
+if [ -e "/NodeLink/NodeLink.exe" ]; then
 mv /NodeLink/NodeLink.exe /NodeLink/NodeLink.exe.migrated
 fi
 

@@ -1,0 +1,20 @@
+FROM mcr.microsoft.com/dotnet/core/runtime:3.1
+
+EXPOSE 8090
+VOLUME c:/NodeLink
+
+#copy in the needed files
+# COPY ["PowerShell-6.2.3-win-x64", "C:/Program Files/PowerShell/"]
+COPY startnodelink.ps1 c:/startnodelink.ps1
+RUN mkdir "c:\Program Files\PowerShell" \
+    && curl -LO https://github.com/PowerShell/PowerShell/releases/download/v6.2.3/PowerShell-6.2.3-win-x64.zip \
+    && tar -xf PowerShell-6.2.3-win-x64.zip -C "c:\Program Files\PowerShell" \
+    && del PowerShell-6.2.3-win-x64.zip
+
+# Define environment variable & install powershell
+USER ContainerAdministrator
+RUN setx /M PATH "%PATH%;C:\Program Files\PowerShell"
+USER ContainerUser
+
+# Run  when the container launches 
+CMD ["pwsh", "./startnodelink.ps1"]
