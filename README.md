@@ -25,14 +25,14 @@ scyto/nodelink:dev-latest.windows - dotNet 3.1.0-preview1.19506.1 - nodelink 10.
 
 ### Linux Version 
 
-For linux  use the following command to run the container - replace $pwd% with path to your host mapped files as required (where nodelink will store its config)..
+For linux  use the following command to run the container - replace $pwd$ with path to your host mapped files as required (where nodelink will store its config)..
 
 `docker run --name=NodeLink -v $PWD$:/NodeLink -v /etc/localtime:/etc/localtime:rw -p 8090:8090 scyto/NodeLink:dev-latest`
  
 
 ### Windows Version
 
-For windows use the following command to run the container -replace $pwd% with path to your host mapped files as required (where nodelink will store its config)..
+For windows use the following command to run the container -replace $pwd$ with path to your host mapped files as required (where nodelink will store its config)..
 
 `docker run --name=NodeLink --user "NT AUTHORITY\SYSTEM" -v $PWD$:C:\NodeLink -p 8090:8090 scyto/NodeLink:dev-latest.windows`
  
