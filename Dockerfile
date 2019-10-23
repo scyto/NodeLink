@@ -1,12 +1,14 @@
-# nodelink v10 supports amd64, arm64 and arm32v7 using buildx to compile multiple archs (dependant on archs available for source container)
-FROM mcr.microsoft.com/dotnet/core/runtime
+# nodelink v9 linux amd64 only - docker hub autobuild
+FROM mono:slim
 
 EXPOSE 8090
 VOLUME NodeLink
 COPY startnodelink.sh /startnodelink.sh
 
 RUN apt-get update && apt-get install -y \
-    wget \
+	wget \
+    libmono-System.Net.Http \
+    libmono-Microsoft.VisualBasic \
     && apt-get clean \
     && chmod +x startnodelink.sh 
 
