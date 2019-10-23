@@ -34,7 +34,7 @@ For linux  use the following command to run the container - replace $pwd$ with p
 
 For windows use the following command to run the container -replace $pwd$ with path to your host mapped files as required (where nodelink will store its config)..
 
-`docker run --name=NodeLink --user "NT AUTHORITY\SYSTEM" -v $PWD$:C:\NodeLink -p 8090:8090 scyto/NodeLink:dev-latest.windows`
+`docker run --name=NodeLink -v $PWD$:C:\NodeLink -p 8090:8090 scyto/NodeLink:dev-latest.windows`
  
 ## Feedback
 Let me know if you find issues. You can bug them on the dev github branch. Dockerhub page here https://hub.docker.com/r/scyto/nodelink
