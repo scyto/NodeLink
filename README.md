@@ -11,16 +11,16 @@ https://forum.universal-devices.com/topic/19214-nodelink-docker/
 * dependencies are installed as part of docker file (please file a bug if you find a missing dependency)
 * dockerfile optimized to reduce the number of layers and resulting image size
 
-### Secondly it uses new dotNet core runtime version 3 and new v10 NodeLink 
+### Secondly it uses new dotNet core runtime version 3.1 and new v10 NodeLink 
 https://forum.universal-devices.com/topic/27593-nodelink-moved-to-net-core-3/?do=findComment&comment=271922
 
 ## Getting Started
 
 ### My full set of tags is as follows:
 ```
-scyto/nodelink:latest             - mono             , nodelink v9.x (linux amd64 only)
-sycto/nodelink:dev-latest         - dotNet 3.0.0 Core, nodelinkv10.x (linux amd64 & arm32v7 & arm64)
-scyot/nodelink:dev-latest.windows - dotNet 3.0.0 Core, nodelinkv10.x (windows amd64)
+scyto/nodelink:latest             - mono                         , nodelink v9.x (linux amd64 only)
+sycto/nodelink:dev-latest         - dotNet 3.1.0-preview1.19506.1, nodelinkv10.x (linux amd64 & arm32v7 & arm64)
+scyot/nodelink:dev-latest.windows - dotNet 3.1.0-preview1.19506.1, nodelinkv10.x (windows amd64)
 ``` 
 
 ### Linux Version 
