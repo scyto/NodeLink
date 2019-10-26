@@ -3,11 +3,11 @@
 This docker container is for folks wanting to use NodeLink for ISY994i
 It is based on the information provided here:
 
-https://forum.universal-devices.com/topic/19214-nodelink-docker/
+<https://forum.universal-devices.com/topic/19214-nodelink-docker/>
 
-## Why another container for this app?
+## Why another container for this app
 
-### Firstly this container strives to be as minimial as possible, as such:
+### Firstly this container strives to be as minimial as possible, as such
 
 * it uses latest Microsoft dotNet3 Core Runtimes allowing for smaller than mono:latest or mono:slim
 * dependencies are installed as part of docker file (please file a bug if you find a missing dependency)
@@ -15,7 +15,7 @@ https://forum.universal-devices.com/topic/19214-nodelink-docker/
 
 ### Secondly it uses new dotNet core runtime version 3.1 and new v10 NodeLink
 
-https://forum.universal-devices.com/topic/27593-nodelink-moved-to-net-core-3/?do=findComment&comment=271922
+<https://forum.universal-devices.com/topic/27593-nodelink-moved-to-net-core-3/?do=findComment&comment=271922>
 
 ## Getting Started
 
@@ -40,4 +40,4 @@ For windows use the following command to run the container -replace $pwd$ with p
 
 ## Feedback
 
-Let me know if you find issues. You can bug them on the dev github branch. Dockerhub page here https://hub.docker.com/r/scyto/nodelink
+Let me know if you find issues. You can bug them on the dev github branch. Dockerhub page here <https://hub.docker.com/r/scyto/nodelink>
