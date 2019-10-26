@@ -15,7 +15,6 @@ Write-Output "checking if NodeLink.dll exists, if not it will copy latest from a
 If(!(test-path $path"\"$dll -PathType Leaf))
 {
 #    Invoke-WebRequest $uri"\"$dll -OutFile $path"\"$dll
-     Invoke-WebRequest -o c:\nodelink\nodelink.dll http://automationshack.com/Files/Test/NodeLink.dll 
 }
 
 Write-Output "checking if NodeLink JSON exists, if not it will copy latest from automationshack"

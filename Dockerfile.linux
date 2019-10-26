@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
 # Define environment variable
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ENV LANG C.UTF-8
+ENV TZ America/Los_Angeles
 
 # Run  when the container launches 
 # ENTRYPOINT ["./startnodelink.sh"]
