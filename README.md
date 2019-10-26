@@ -1,3 +1,10 @@
+
+![pulls](https://badgen.net/docker/pulls/scyto/nodelink?icon=docker&label=pulls)
+![amd64](https://badgen.net/badge/icon/amd64?icon=windows&label)
+![amd64](https://badgen.net/badge/liux/amd64?icon=https://simpleicons.now.sh/linux/fff&label)
+![amd64](https://badgen.net/badge/liux/arm64?icon=https://simpleicons.now.sh/linux/fff&label)
+![amd64](https://badgen.net/badge/liux/arm32v7?icon=https://simpleicons.now.sh/linux/fff&label)
+
 # NodeLink v10 for ISY994i
 
 This docker container is for folks wanting to use NodeLink for ISY994i
