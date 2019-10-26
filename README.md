@@ -30,13 +30,17 @@ dotNet 3.1.0-preview1.19506.1 - nodelink 10.x - linux/amd64,arm,arm64, windows/a
 
 For linux  use the following command to run the container - replace $pwd$ with path to your host mapped files as required (where nodelink will store its config)..
 
-`docker run --name=NodeLink -v $PWD$:/NodeLink -v /etc/localtime:/etc/localtime:rw -p 8090:8090 scyto/nodelink`
+`docker run --name=NodeLink -v $PWD$:/NodeLink -p 8090:8090 scyto/nodelink`
+
+You can use the TZ= env var to set the time in the container.
 
 ### Windows Version
 
 For windows use the following command to run the container -replace $pwd$ with path to your host mapped files as required (where nodelink will store its config)..
 
 `docker run --name=NodeLink -v $PWD$:C:\NodeLink -p 8090:8090 scyto/nodelink`
+
+You can use the TZ= env var to set the time in the container.
 
 ## Feedback
 
